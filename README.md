@@ -12,7 +12,7 @@
 * [tview](https://github.com/rivo/tview)
 
 # Installation
-To build and install the `qquiz` executable, you can simply run `go install github.com/pafoster/qquiz`. This will download the source (along with dependencies) and build the executable. You should end up with a `qquiz` executable in `$GOBIN` (defaults to `~/go/bin`). If desired, `export PATH:$PATH:~/go/bin` in your `.profile`.
+To build and install the `qquiz` executable, you can simply run `go install github.com/pafoster/qquiz@latest`. This will download the source (along with dependencies) and build the executable. You should end up with a `qquiz` executable in `$GOBIN` (defaults to `~/go/bin`). If desired, `export PATH:$PATH:~/go/bin` in your `.profile`.
 
 # Building
 ```
