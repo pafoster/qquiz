@@ -62,9 +62,9 @@ qquiz ~/flashcards/{machine_learning,statistics}
 
 # Key Bindings
 * `f` Flip between question and answer for current flashcard
-* `r` Upgrade current flashcard (available when answer is displayed)
-* `d` Downgrade current flashcard (available when answer is displayed)
+* `r` Upgrade current flashcard, modifying `.qq` file (available when answer is displayed)
+* `d` Downgrade current flashcard, modifying `.qq` file (available when answer is displayed)
 * `s` Skip current flashcard without modifying `.qq` file
-* `e` Open `.qq` file for current flashcard in `$EDITOR`
+* `e` Open `.qq` file for current flashcard in `$EDITOR` (useful for correcting typos)
 * Arrow keys, `PgUp`, `PgDn` Scroll text extending beyond window (useful if you want to include additional notes in the answer text)
 * `q` Quit
