@@ -27,7 +27,7 @@ make build
 * *due*: Flashcards whose due date is in the past
 * *non-due*: Flashcards whose due date is in the future
 
-Those flashcards designated as '*new*' and '*due*' are shuffled and displayed for review when `qquiz` is run (subject to any user-specified limits, see below). Upon review, the new due date for new and downgraded flashcards is set to 6 hours from the time of review. The new due date for upgraded flashcards is set to 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file as lines beginning with `d:` and `r:`, respectively.
+Those flashcards designated as '*new*' and '*due*' are shuffled and displayed for review when `qquiz` is run (subject to any user-specified limits, see below). Upon review, the new due date for new and downgraded flashcards is set to 6 hours from the time of review. The new due date for upgraded flashcards is set to 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard (or skipping a new flashcard), the new due date and most recent time of review are written to the relevant `.qq` file as lines beginning with `d:` and `r:`, respectively, in RFC3339 format.
 
 # Tutorial
 ## Creating a Flashcard
