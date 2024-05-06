@@ -1,13 +1,11 @@
 # qquiz - Spaced Repetition Learning in the Terminal 
-`qquiz` (quick quiz) is a tool for **spaced repetition learning** (SRL), a method which helps you memorise facts using flashcards. Each flashcard specifies a quiz question and its correct answer. For example, a flashcard might specify the question "In which year was J.S. Bach born?" and its answer "1685 CE". In SRL, a flashcard is reviewed more frequently or less frequently, depending on **a)** your ability to recall the correct answer and **b)** how recently the flashcard was introduced. In qquiz, performance is evaluated based on self-assessment, i.e. you may manually 'upgrade' or 'downgrade' a flashcard after being shown the correct answer. Upgrading means reviewing a flashcard less frequently; conversely downgrading means reviewing a flashcard more frequently.
+`qquiz` (quick quiz) is a tool for **spaced repetition learning** (SRL), a method which helps you memorise facts using flashcards. Each flashcard specifies a quiz question and its correct answer. For example, a flashcard might specify the question "In which year was J.S. Bach born?" and its correct answer "1685 CE". In SRL, a flashcard is reviewed more frequently or less frequently, depending on **a)** your ability to recall the correct answer and **b)** how recently the flashcard was introduced. In qquiz, performance is evaluated based on self-assessment, i.e. you may manually 'upgrade' or 'downgrade' a flashcard after being shown the correct answer. Upgrading means reviewing a flashcard less frequently; conversely downgrading means reviewing a flashcard more frequently.
 
 `qquiz` has a terminal user interface (TUI) and a minimalist flavour. Each flashcard is a human-readable file with `.qq` extension, with all metadata (reviewed and due dates) stored in the `.qq` file. No additional files are needed for maintaining state.
 
 # Similar Software
 * [Anki](https://apps.ankiweb.net/) (more features, GUI-based)
 * [Vocage](https://github.com/proycon/vocage) (self-described minimalistic, TUI-based)
-
-(in the sense of [Anki](https://apps.ankiweb.net/)), but for the **terminal** and with a **minimalist flavour**.
 
 # Requirements
 * Go 1.20
@@ -22,7 +20,7 @@ To build and install the `qquiz` executable, you can simply run `go install gith
 * `make build`
 
 # The Learning Scheme
-qquiz implements the following (simple) learning scheme based on timestamps. The collection of flashcards is partitioned into three (disjoint) subsets:
+`qquiz` implements the following (simple) learning scheme based on timestamps. The collection of flashcards is partitioned into three (disjoint) subsets:
 * *new*: Flashcards which were never reviewed
 * *due*: Flashcards whose due is in the past
 * *non-due*: Flashcards whose due is in the future
@@ -36,7 +34,7 @@ Create a directory for storing your flashcards, e.g. `mkdir ~/flashcards`. To cr
 q: In which year was J.S. Bach born?
 a: 1685 CE
 ```
-That is, lines beginning with `q:` denote the question and lines beginning `a:` denote the answer. For multi-line questions (or multi-line answers), it's possible to have multiple `q:` and `a:` lines in a `.qq` file.
+That is, lines beginning with `q:` denote the question and lines beginning `a:` denote the answer. (For multi-line questions (or multi-line answers), it's possible to have multiple `q:` and `a:` lines in a `.qq` file.)
 
 ## Reviewing Flashcards
 Review all '*due*' and '*new*' flashcards in the directory `~/flashcards`:
