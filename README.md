@@ -14,4 +14,9 @@ qquiz has a terminal user interface (TUI) and a minimalist flavour. Each flashca
 * [tview](https://github.com/rivo/tview)
 
 # Installation
-* To build and install the `qquiz` executable, you can simply use `go install github.com/pafoster/qquiz`. This will download the source (along with dependencies) and build the executable. You should end up with a `qquiz` executable in `$GOBIN` (defaults to `~/go/bin`).
+To build and install the `qquiz` executable, you can simply use `go install github.com/pafoster/qquiz`. This will download the source (along with dependencies) and build the executable. You should end up with a `qquiz` executable in `$GOBIN` (defaults to `~/go/bin`).
+
+# Building
+* `git clone 'https://github.com/pafoster/qquiz/'`
+* `cd qquiz`
+* `make build`
