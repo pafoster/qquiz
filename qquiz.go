@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/pafoster/qquiz/pkg/qquiz/collection"
-	"github.com/pafoster/qquiz/pkg/qquiz/ui"
+	"github.com/pafoster/qquiz/internal/collection"
+	"github.com/pafoster/qquiz/internal/ui"
 )
 
 func main() {

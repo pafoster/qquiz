@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/pafoster/qquiz/pkg/qquiz/card"
+	"github.com/pafoster/qquiz/internal/card"
 )
 
 const extension = ".qq"

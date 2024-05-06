@@ -10,7 +10,7 @@ import (
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
 
-	"github.com/pafoster/qquiz/pkg/qquiz/card"
+	"github.com/pafoster/qquiz/internal/card"
 )
 
 type UI struct {

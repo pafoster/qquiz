@@ -5,4 +5,4 @@ tidy:
 
 .PHONY: build
 build:
-	go build ./cmd/qquiz/
+	go build .
