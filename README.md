@@ -34,7 +34,7 @@ Create a directory for storing your flashcards, e.g. `mkdir ~/flashcards`. To cr
 q: In which year was J.S. Bach born?
 a: 1685 CE
 ```
-That is, lines beginning with `q:` denote the question and lines beginning `a:` denote the answer. (For multi-line questions (or multi-line answers), it's possible to have multiple `q:` and `a:` lines in a `.qq` file.)
+That is, lines beginning with `q:` denote the question and lines beginning `a:` denote the answer. (For multi-line questions or multi-line answers, it's possible to have multiple `q:` and `a:` lines in a `.qq` file.)
 
 ## Reviewing Flashcards
 Review all '*due*' and '*new*' flashcards in the directory `~/flashcards`:
