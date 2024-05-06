@@ -66,5 +66,5 @@ qquiz ~/flashcards/{machine_learning,statistics}
 * `d` Downgrade current flashcard (available when answer is displayed)
 * `s` Skip current flashcard without modifying `.qq` file
 * `e` Open current flashcard's `.qq` file in `$EDITOR`
-* Arrow keys, `PgUp`, `PgDn` Scroll text extending beyond window (useful if you want to include additional notes)
+* Arrow keys, `PgUp`, `PgDn` Scroll text extending beyond window (useful if you want to include additional notes in the answer text)
 * `q` Quit
