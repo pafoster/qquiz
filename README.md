@@ -22,7 +22,7 @@ make build
 ```
 
 # The Learning Scheme
-`qquiz` implements the following (simple) learning scheme based on timestamps. The collection of flashcards is partitioned into three (disjoint) subsets:
+`qquiz` implements the following (simple) learning scheme based on timestamps. When `qquiz` is run, the collection of flashcards is partitioned into three (disjoint) subsets:
 * *new*: Flashcards which were never reviewed
 * *due*: Flashcards whose due date is in the past
 * *non-due*: Flashcards whose due date is in the future
