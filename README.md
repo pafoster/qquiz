@@ -57,3 +57,5 @@ You can invoke `qquiz` using multiple directories as positional arguments. This 
 ```
 qquiz ~/flashcards/{machine_learning,statistics}
 ```
+# Screenshot
+![screenshot](screenshots/qquiz.png)
