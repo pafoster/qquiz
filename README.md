@@ -23,9 +23,10 @@ To build and install the `qquiz` executable, you can simply run `go install gith
 
 # The Learning Scheme
 qquiz implements the following (simple) learning scheme based on timestamps. The collection of flashcards is partitioned into three (disjoint) subsets:
-* *new* Flashcards which were never reviewed
-* *due* Flashcards whose due is in the past
-* *non-due* Flashcards whose due is in the future
+* *new*: Flashcards which were never reviewed
+* *due*: Flashcards whose due is in the past
+* *non-due*: Flashcards whose due is in the future
+
 Those flashcards designated as '*new*' and '*due*' are shuffled and reviewed when `qquiz` is run (subject to any user-specified limits, see below). The new due date for new and downgraded flashcards is 6 hours from the most recent time of review. The new due date for upgraded flashcards is 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file.
 
 # Tutorial
