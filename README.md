@@ -25,7 +25,7 @@ To build and install the `qquiz` executable, you can simply run `go install gith
 * *due*: Flashcards whose due is in the past
 * *non-due*: Flashcards whose due is in the future
 
-Those flashcards designated as '*new*' and '*due*' are shuffled and reviewed when `qquiz` is run (subject to any user-specified limits, see below). The new due date for new and downgraded flashcards is 6 hours from the most recent time of review. The new due date for upgraded flashcards is 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file.
+Those flashcards designated as '*new*' and '*due*' are shuffled and reviewed when `qquiz` is run (subject to any user-specified limits, see below). The new due date for new and downgraded flashcards is 6 hours from the most recent time of review. The new due date for upgraded flashcards is 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file as lines beginning with `d:` and `r:`, respectively.
 
 # Tutorial
 ## Creating a Flashcard
@@ -66,5 +66,5 @@ qquiz ~/flashcards/{machine_learning,statistics}
 * `d` Downgrade current flashcard (available when answer is displayed)
 * `s` Skip current flashcard without modifying `.qq` file
 * `e` Open current flashcard's `.qq` file in `$EDITOR`
-* Arrow keys, `PgUp`, `PgDn` Scroll text extending beyond window
+* Arrow keys, `PgUp`, `PgDn` Scroll text extending beyond window (useful if you want to include additional notes)
 * `q` Quit
