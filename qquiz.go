@@ -12,16 +12,16 @@ import (
 func main() {
 	flag.Usage = func() {
 		w := flag.CommandLine.Output()
-		fmt.Fprintf(w, "usage: %s [-c] [-n int] [-m int] directory ...\n", os.Args[0])
+		fmt.Fprintf(w, "usage: %s [-c] [-d int] [-n int] directory ...\n", os.Args[0])
 		flag.PrintDefaults()
 	}
 
-	nMaxDue := flag.Int("n", -1, "maximum number of due cards")
-	nMaxNew := flag.Int("m", -1, "maximum number of new cards")
+	nMaxNew := flag.Int("n", -1, "maximum number of new cards")
+	nMaxDue := flag.Int("d", -1, "maximum number of due cards")
 	f := flag.Lookup("n")
-	f.DefValue = ": all due"
-	f = flag.Lookup("m")
 	f.DefValue = ": all new"
+	f = flag.Lookup("d")
+	f.DefValue = ": all due"
 
 	nonInteractive := flag.Bool("c", false, "print number of cards we would review (if any) and exit")
 
