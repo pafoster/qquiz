@@ -112,13 +112,13 @@ func (ui *UI) Run() {
 }
 
 func (ui *UI) editCurrentQuestion() {
-	cardPath := ui.cards[ui.currentPos].Path
+	currentCard := ui.cards[ui.currentPos]
 	editor := "vi"
 	if v, ok := os.LookupEnv("EDITOR"); ok {
 		editor = v
 	}
 	ui.app.Suspend(func() {
-		cmd := exec.Command(editor, cardPath)
+		cmd := exec.Command(editor, currentCard.Path)
 		cmd.Stdin = os.Stdin
 		cmd.Stdout = os.Stdout
 		if err := cmd.Run(); err != nil {
@@ -126,14 +126,15 @@ func (ui *UI) editCurrentQuestion() {
 			ui.app.Stop()
 		}
 	})
-	if c, err := card.New(cardPath); err == nil {
-		ui.cards[ui.currentPos] = c
+	if c, err := card.New(currentCard.Path); err == nil {
+		currentCard = c
 	}
 }
 
 func (ui *UI) nextQuestion(prevAnsIsCorrect, skip bool) {
-	if !skip {
-		if err := ui.cards[ui.currentPos].Save(prevAnsIsCorrect); err != nil {
+	currentCard := ui.cards[ui.currentPos]
+	if !skip || currentCard.Due == nil || currentCard.Reviewed == nil {
+		if err := currentCard.Save(prevAnsIsCorrect); err != nil {
 			fmt.Fprintf(os.Stderr, "error: %v\n", err)
 			ui.app.Stop()
 		}

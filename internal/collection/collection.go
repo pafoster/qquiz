@@ -72,7 +72,6 @@ func (c *Collection) Review(nMaxDue, nMaxNew int) (cards []*card.Card) {
 }
 
 func partition(cards []*card.Card) (due, nu, nonDue []*card.Card) {
-
 	now := time.Now()
 	for _, c := range cards {
 		if c.Due == nil {
