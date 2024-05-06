@@ -56,7 +56,7 @@ func (ui *UI) Run() {
 		}
 		title := fmt.Sprintf("Card %d of %d %s- %s ", ui.currentPos+1, len(ui.cards), newInfix, qa)
 
-		toolText := "f: flip r: mark right w: mark wrong s: skip e: edit q: quit"
+		toolText := "f: flip r: upgrade w: downgrade s: skip e: edit q: quit"
 		if !ui.showAnswer {
 			toolText = "f: flip s: skip e: edit q: quit"
 		}
