@@ -1,5 +1,5 @@
 # qquiz - Spaced Repetition Learning in the Terminal 
-qquiz (quick quiz) is a tool for **spaced repetition learning** (SRL), a method which helps you memorise facts using flashcards. Each flashcard specifies a quiz question and its correct answer. For example, a flashcard might specify the question "In which year was J.S. Bach born?" and its answer "1685 CE". In SRL, a flashcard is reviewed more frequently or less frequently, depending on a) your ability to recall the correct answer and b) how recently the flashcard was introduced. In qquiz, performance is evaluated based on self-assessment, i.e. you may manually 'upgrade' or 'downgrade' a flashcard, after being shown the correct answer. Upgrading means reviewing a flashcard less frequently; conversely downgrading means reviewing a flashcard more frequently.
+qquiz (quick quiz) is a tool for **spaced repetition learning** (SRL), a method which helps you memorise facts using flashcards. Each flashcard specifies a quiz question and its correct answer. For example, a flashcard might specify the question "In which year was J.S. Bach born?" and its answer "1685 CE". In SRL, a flashcard is reviewed more frequently or less frequently, depending on **a)** your ability to recall the correct answer and **b)** how recently the flashcard was introduced. In qquiz, performance is evaluated based on self-assessment, i.e. you may manually 'upgrade' or 'downgrade' a flashcard after being shown the correct answer. Upgrading means reviewing a flashcard less frequently; conversely downgrading means reviewing a flashcard more frequently.
 
 qquiz has a terminal user interface (TUI) and a minimalist flavour. Each flashcard is a human-readable file with `.qq` extension, with all metadata (reviewed and due dates) stored in the `.qq` file. No additional files are needed for maintaining state.
 
@@ -23,10 +23,10 @@ To build and install the `qquiz` executable, you can simply run `go install gith
 
 # The Learning Scheme
 qquiz implements the following (simple) learning scheme based on timestamps. The collection of flashcards is partitioned into three (disjoint) subsets:
-* *new* Flashcards missing a due date
-* *due* Flashcards whose due date is in the past
-* *non-due* Flashcards whose due date is in the future
-Those flashcards designated as '*new*' and '*due*' are shuffled and may be displayed when `qquiz` is run (subject to any user-specified limits, see below). The review interval for new and downgraded flashcards is 6 hours. The review interval for upgraded flashcards is 2.0 times the existing review interval.
+* *new* Flashcards which were never reviewed
+* *due* Flashcards whose due is in the past
+* *non-due* Flashcards whose due is in the future
+Those flashcards designated as '*new*' and '*due*' are shuffled and reviewed when `qquiz` is run (subject to any user-specified limits, see below). The new due date for new and downgraded flashcards is 6 hours from the most recent time of review. The new due date for upgraded flashcards is 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file.
 
 # Tutorial
 ## Creating a Flashcard
