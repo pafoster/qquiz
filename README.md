@@ -59,3 +59,12 @@ qquiz ~/flashcards/{machine_learning,statistics}
 ```
 # Screenshot
 ![screenshot](screenshots/qquiz.png)
+
+# Key Bindings
+* `t` Toggle question/answer
+* `r` Upgrade current flashcard (available when answer is displayed)
+* `d` Downgrade current flashcard (available when answer is displayed)
+* `s` Skip current flashcard without modifying `.qq` file
+* `e` Open current flashcard's `.qq` file in `$EDITOR`
+* Arrow keys, `PgUp`, `PgDn` Scroll text extending beyond window
+* `q` Quit
