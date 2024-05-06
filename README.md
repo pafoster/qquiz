@@ -51,7 +51,7 @@ Review only '*due*' flashcards:
 ```
 qquiz -n 0 ~/flashcards
 ```
-Print how many flashcards we would review (if any) and exit. (Useful for inclusion in a cronjob):
+Print how many flashcards we would review (if any) and exit. (Intended as a way of generating reminders via a cronjob):
 ```
 qquiz -c ~/flashcards
 ```
@@ -66,7 +66,7 @@ qquiz ~/flashcards/{machine_learning,statistics}
 * `f` Flip between question and answer
 * `r` Upgrade current flashcard, modifying `.qq` file (available when answer is displayed)
 * `w` Downgrade current flashcard, modifying `.qq` file (available when answer is displayed)
-* `s` Skip current flashcard without modifying `.qq` file
+* `s` Skip current flashcard (for due flashcards, the `.qq` file is left unmodified; for new flashcards, the `.qq` is modified to include newly initialised timestamps)
 * `e` Open current flashcard in `$EDITOR` (useful for correcting typos or inaccuracies)
 * Arrow keys, `PgUp`, `PgDn` Scroll text (useful if you want to include extensive notes in the answer)
 * `q` Quit
