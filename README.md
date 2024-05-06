@@ -22,12 +22,12 @@ make build
 ```
 
 # The Learning Scheme
-`qquiz` implements the following (simple) learning scheme based on timestamps. When `qquiz` is run, the collection of flashcards is partitioned into three (disjoint) subsets:
+`qquiz` implements the following (simple) learning scheme based on timestamps. When `qquiz` is run, the collection of flashcards is first partitioned into three (disjoint) subsets:
 * *new*: Flashcards which were never reviewed
 * *due*: Flashcards whose due date is in the past
 * *non-due*: Flashcards whose due date is in the future
 
-Those flashcards designated as '*new*' and '*due*' are shuffled and reviewed when `qquiz` is run (subject to any user-specified limits, see below). Upon review, the new due date for new and downgraded flashcards is 6 hours from the time of review. The new due date for upgraded flashcards is 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file as lines beginning with `d:` and `r:`, respectively.
+Those flashcards designated as '*new*' and '*due*' are shuffled and displayed for review when `qquiz` is run (subject to any user-specified limits, see below). Upon review, the new due date for new and downgraded flashcards is set to 6 hours from the time of review. The new due date for upgraded flashcards is set to 2.0 times the interval between the previous time of review and existing due date. Upon upgrading or downgrading a flashcard, the new due date and most recent time of review are written to the relevant `.qq` file as lines beginning with `d:` and `r:`, respectively.
 
 # Tutorial
 ## Creating a Flashcard
@@ -66,7 +66,7 @@ qquiz ~/flashcards/{machine_learning,statistics}
 * `f` Flip between question and answer
 * `r` Upgrade current flashcard, modifying `.qq` file (available when answer is displayed)
 * `w` Downgrade current flashcard, modifying `.qq` file (available when answer is displayed)
-* `s` Skip current flashcard (for due flashcards, the `.qq` file is left unmodified; for new flashcards, the `.qq` is modified to include newly initialised timestamps)
+* `s` Skip current flashcard (for '*due*' flashcards, the `.qq` file is left unmodified; for '*new*' flashcards, the `.qq` is modified to include newly initialised timestamps)
 * `e` Open current flashcard in `$EDITOR` (useful for correcting typos or inaccuracies)
 * Arrow keys, `PgUp`, `PgDn` Scroll text (useful if you want to include extensive notes in the answer)
 * `q` Quit
