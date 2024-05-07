@@ -30,7 +30,7 @@ Those flashcards designated as '*new*' and '*due*' are shuffled and displayed fo
 
 # Tutorial
 ## Creating a Flashcard
-Create a directory for storing your flashcards, e.g. `mkdir ~/flashcards`. To create a new flashcard, open a new `.qq` file in your editor, e.g. `vi ~/flashcards/turing_born.qq`. A minimal `.qq` file might look like this:
+Create a directory for storing your flashcards, e.g. `mkdir ~/flashcards`. To create a new flashcard, open a new `.qq` file in your editor, e.g. `vi ~/flashcards/turing_born.qq`. A new `.qq` file might look like this:
 ```
 q: In which year was A.M. Turing born?
 a: 1912 CE
