@@ -54,7 +54,7 @@ Print how many flashcards we would review (if any) and exit. (Intended as a way 
 ```
 qquiz -c ~/flashcards
 ```
-You can invoke `qquiz` using multiple directories as positional arguments. This permits you to organise your flashcards into multiple subdirectories (collections), which you might decide to combine into one review session. Using shell expansion, you could write:
+You can invoke `qquiz` using multiple directories as positional arguments. This permits you to organise your flashcards into multiple subdirectories (decks), which you might decide to combine into one review session. Using shell expansion, you could write:
 ```
 qquiz ~/flashcards/{machine_learning,statistics}
 ```
