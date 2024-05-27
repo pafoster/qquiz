@@ -128,6 +128,7 @@ func (ui *UI) editCurrentQuestion() {
 	})
 	if c, err := card.New(currentCard.Path); err == nil {
 		currentCard = c
+		ui.cards[ui.currentPos] = c
 	}
 }
 
