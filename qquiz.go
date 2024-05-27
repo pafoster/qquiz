@@ -28,7 +28,7 @@ func main() {
 	flag.Parse()
 	dirs := flag.Args()
 
-	os.Exit(run(dirs, *nMaxNew, *nMaxDue, *nonInteractive))
+	os.Exit(run(dirs, *nMaxDue, *nMaxNew, *nonInteractive))
 }
 
 func run(dirs []string, nMaxDue, nMaxNew int, nonInteractive bool) int {
